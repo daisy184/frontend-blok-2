@@ -1,0 +1,195 @@
+html {
+    background-color: #0042A3;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    box-shadow: 30px 20px 20px 0 rgba(0, 0, 0, .1);
+    
+}
+
+.container {
+    display: flex;
+    list-style: none;
+    justify-content: space-around
+
+}
+
+nav {
+    background-color: #002E77;
+    padding: 10px;
+    position: relative;
+    
+    
+}
+
+.iglo{
+    font-size: 2em;
+}
+
+.hamburger{
+    font-size: 2em;
+}
+
+li,
+a {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 23px;
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+li a:hover{
+    color: limegreen;
+}
+
+
+.navpc{
+display: none;
+}
+
+.dropdown1 li , ul li {
+        list-style: none;
+    }
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: none;
+  text-align: right;
+    margin-left: -130px;
+    margin-top: 10px;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+     background-color: #002E77;
+    padding: 25px;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+    
+}
+/*https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp*/
+
+input {
+    display: none;
+}
+
+input:checked~ul.dropdown {
+  max-height: 300px;
+}
+
+.dropdown1 li a {
+        font-size: 1em;
+}
+
+
+.logo{
+    display: none;
+}
+
+
+
+
+
+@media screen and (min-width: 700px){
+    .dropdown1 li a {
+        font-size: 1em;
+}
+    
+    .iglo , .hamburger {
+        font-size: 2em;
+    }
+    
+    ul li ul {
+
+    margin-left: -120px;
+        margin-top: 10px;
+}
+}
+
+@media screen and (min-width: 1025px){
+    
+    .navresp {
+        display: none;
+    }
+    .navpc {
+        display: block;
+    }
+
+   ul li ul {
+    position: relative;
+    margin-left: -250px;
+}
+    
+}
+
+#homefoto {
+    max-width: 100%;
+}
+
+/*.homeartiesten{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.7em;
+    grid-auto-rows: 250px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 20px 20px 20px 20px;
+} */
+
+.homeartiesten{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1.7em;
+    grid-auto-rows: 250px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 20px 20px 20px 20px;
+
+}
+
+.homeartiesten > div {
+    background: #6FCE5F;
+    padding: 1em;
+    font-family: 'Bebas Neue', cursive;
+    grid-auto-rows: minmax(100px, max-content);
+    padding: 20px;
+    border: 1px solid;
+    box-shadow: 1px 5px 20px inset;
+    
+}
+
+.rij1 img {
+    width: 300px;
+    height: 200px;
+    
+}
+
+@media screen and (max-width: 400px) {
+    .rij1 {
+        width: 300px;
+    }
+}
+
+#hartje {
+    font-size: 1.5em;
+    color: white;
+    padding-right: 10px;
+}
+
+#geluid {
+    font-size: 1.5em;
+    color: white;
+}
+
