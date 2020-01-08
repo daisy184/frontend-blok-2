@@ -4,31 +4,28 @@ html {
     margin: 0px;
 }
 
-header {
-    box-shadow: 30px 20px 20px 0 rgba(0, 0, 0, .1);
-    
-}
 
 .container {
     display: flex;
     list-style: none;
     justify-content: space-around
-
 }
 
 nav {
     background-color: #002E77;
     padding: 10px;
     position: relative;
-    
-    
 }
 
-.iglo{
+.iglo1 {
     font-size: 2em;
 }
 
-.hamburger{
+.iglo2 {
+    font-size: 1.2em;
+}
+
+.hamburger {
     font-size: 2em;
 }
 
@@ -43,128 +40,123 @@ a {
 
 
 
-li a:hover{
+li a:hover {
     color: limegreen;
 }
 
 /* Samengewerkt met Max Mulder */
 
-.navpc{
-display: none;
+.navpc {
+    display: none;
 }
 
-.dropdown1 li , ul li {
-        list-style: none;
-    }
+ul li {
+    list-style: none;
+}
 
 ul li ul {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  display: none;
-  text-align: right;
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    display: none;
+    text-align: right;
     margin-left: -130px;
     margin-top: 10px;
 }
 
 ul li:hover > ul,
 ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-     background-color: #002E77;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    background-color: #002E77;
     padding: 25px;
 }
 
 ul li ul li {
-  clear: both;
-  width: 100%;
-    
+    clear: both;
+    width: 100%;
+
 }
+
 /*https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp*/
 
 input {
     display: none;
 }
 
-input:checked~ul.dropdown {
-  max-height: 300px;
-}
-
 .dropdown1 li a {
-        font-size: 1em;
+    font-size: 1em;
 }
 
 
-.logo{
+.logo {
     display: none;
 }
 
 
-
-
-
-@media screen and (min-width: 700px){
-    .dropdown1 li a {
-        font-size: 1em;
-}
-    
-    .iglo , .hamburger {
+@media screen and (min-width: 700px) {
+    .iglo,
+    .hamburger {
         font-size: 2em;
     }
-    
+
     ul li ul {
-
-    margin-left: -120px;
+        margin-left: -120px;
         margin-top: 10px;
-}
+    }
 }
 
-@media screen and (min-width: 1025px){
-    
+@media screen and (min-width: 1025px) {
+
     .navresp {
         display: none;
     }
+
     .navpc {
         display: block;
     }
 
-   ul li ul {
-    position: relative;
-    margin-left: -250px;
-}
-    
+    ul li ul {
+        position: relative;
+        margin-left: -250px;
+    }
+
 }
 
-#homefoto {
+.mainfoto {
     max-width: 100%;
+    margin-bottom: 20px;
 }
 
-.homeartiesten{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1.7em;
-    grid-auto-rows: 250px;
-    grid-auto-rows: minmax(100px, auto);
-    padding: 20px 20px 20px 20px;
-
+.homeartiesten {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.homeartiesten > div {
+.homeartiesten article {
     background: #6FCE5F;
-    padding: 1em;
     font-family: 'Bebas Neue', cursive;
-    grid-auto-rows: minmax(100px, max-content);
     padding: 20px;
     border: 1px solid;
-    box-shadow: 1px 5px 20px inset;
-    
+    box-shadow: 5px 10px #000000;
+    width: 300px;
+    margin: 10px;
+
 }
 
-.rij1 img {
-    width: 300px;
+.homeartiesten >article > a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.homeartiesten > article> a > img {
+    width: 100%;
+    max-width: 300px;
     height: 200px;
-    
 }
 
 @media screen and (max-width: 400px) {
@@ -173,11 +165,36 @@ input:checked~ul.dropdown {
     }
 }
 
-#hartje {
+.fa-youtube {
     font-size: 1.5em;
     color: white;
     padding-right: 10px;
 }
+
+.fa-heart {
+    font-size: 1.5em;
+    color: white;
+    padding-right: 10px;
+}
+
+.liked {
+  animation: likeHeart 2s ease;
+  color: red;
+}
+
+@keyframes likeHeart {
+  50% {
+    transform: scale(15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*#hartje:hover {
+    color: red;
+    transition: color 2s ease-out;
+}*/
 
 #geluid {
     font-size: 1.5em;
@@ -188,36 +205,94 @@ input:checked~ul.dropdown {
     max-width: 100%;
 }
 
-.nieuwsberichten {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1.7em;
-    grid-auto-rows: 250px;
-    grid-auto-rows: minmax(100px, auto);
-    padding: 20px 20px 20px 20px;
-    
-}
-
-.nieuwsberichten > div {
-    background: #6FCE5F;
-    padding: 1em;
-    font-family: 'Bebas Neue', cursive;
-    grid-auto-rows: minmax(100px, max-content);
-    padding: 20px;
-    border: 1px solid;
-    box-shadow: 1px 5px 20px inset;
-    
-}
-
-.nieuwsrij1 img {
-    width: 300px;
-    height: 200px;
-    
-}
-
 @media screen and (max-width: 400px) {
     .rij1 {
         width: 300px;
     }
 }
+
+.tickets {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;    
+}
+
+.tickets > a > article {
+    background: #6FCE5F;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 2em;
+    padding: 25px 25px 25px 25px;
+    margin-top: 3em;
+    border: 1px solid;
+    box-shadow: 5px 10px #000000;
+    width: 300px;
+    margin: 10px;
+}
+
+/*https://www.youtube.com/watch?v=PaiH9DLzaeU */
+
+.detailspagina {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding: 30px;
+    background: #6FCE5F;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    margin-top: 3em;
+    border: 1px solid;
+    box-shadow: 5px 10px #000000;
+    
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+
+}
+
+.detailspagina > article > img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.detailspagina h1 {
+    text-align: center;
+}
+
+iframe {
+    width: 77%;
+    display: block;
+    margin: auto;
+    padding: 30px;
+}
+
+/* footer {
+    color: white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3em;
+    width: 100%;
+    background-color:;
+    padding: 60px 0px;
+}
+
+footer i {
+    font-size: 2em;
+    color: white;
+    padding-right: 20px;
+}
+
+footer fieldset {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    border: none;
+    color: white;  
+} */
+
+
+
 
