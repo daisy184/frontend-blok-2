@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <title>Lowlands</title>
-    
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/4b74e3b787.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300&display=swap" rel="stylesheet">
@@ -15,17 +14,19 @@
 
 <body>
 
-    <!-- Samengewerkt met Max Mulder -->
+<!-- Samengewerkt met Max Mulder -->
 
     <header>
 
         <nav class="navresp">
             <ul class="container">
-                <li><a href="index.html" class="iglo1"> <i class="fas fa-igloo x"></i> Lowlands</a></li>
+                <li><a href="index.html" class="iglo"> <i class="fas fa-igloo x"></i> Lowlands</a></li>
                 <li class="hamburger"> <i class="fas fa-bars "></i>
+                    <input id="check01" type="checkbox" name="hamburger">
+                    <label for="check01"></label>
                     <ul class="dropdown1">
                         <li class="logo"><a href=""></a><i class="fas fa-igloo"></i> </li>
-                        <li><a href="blokkenschema.html">Blokkenschema</a></li>
+                        <li> <a href="blokkenschema.html">Blokkenschema</a></li>
                         <li><a href="tickets.html">Tickets</a></li>
                         <li><a href="nieuws.html">Nieuws</a></li>
                         <li><a href="programma.html">Programma</a></li>
@@ -42,7 +43,7 @@
 
         <nav class="navpc">
             <ul class="container">
-                <li><a href="index.html" class="iglo2"> <i class="fas fa-igloo"></i> </a> </li>
+                <li><a href=""></a><i class="fas fa-igloo"></i> </li>
                 <li> <a href="blokkenschema.html">Blokkenschema</a></li>
                 <li><a href="tickets.html">Tickets</a></li>
                 <li><a href="nieuws.html">Nieuws</a></li>
@@ -61,81 +62,37 @@
         </nav>
 
     </header>
-
-    <main>
-
-        <img class="mainfoto" src="img/homefoto.png">
-        
-        <section class="homeartiesten">
-           
-           <article>
-                   <i class="fab fa-youtube"></i>
-                    <i id="geluid" class="fas fa-volume-up"></i>
-                     <a href="details_twenty.html">
-                    <h1>TWENTY ONE PILOTS</h1>
-                    <img src="img/twentyonepilots.jpg" alt="">
-                         </a>
-                </article> 
-       
-            
-            
-                <article>
-                   <i class="fab fa-youtube"></i>
-                    <i id="geluid" class="fas fa-volume-up"></i>
-                    <a href="">
-                    <h1>TAME IMPALA</h1>
-                    <img src="img/tame.jpg" alt="">
-                      </a>
-                </article>
-          
-          
-                <article>
-                   <i class="fab fa-youtube"></i>
-                    <i id="geluid" class="fas fa-volume-up"></i>
-                      <a href="">
-                    <h1>NEW ORDER</h1>
-                    <img src="img/neworder.jpeg" alt="">
-                        </a>
-                </article>
-        
-           
-                <article>
-                   <i class="fab fa-youtube"></i>
-                    <i id="geluid" class="fas fa-volume-up"></i>
-                     <a href="">
-                    <h1>JORJA SMITH</h1>
-                    <img src="img/jorja.jpg" alt="">
-                         </a>
-                </article>
-       
-        
-                <article>
-                   <i class="fab fa-youtube"></i>
-                    <i id="geluid" class="fas fa-volume-up"></i>
-                        <a href="">
-                    <h1>RONNIE FLEX</h1>
-                    <img src="img/ronnie.jpg" alt="">
-                         </a>
-                </article>
-       
-         
-                <article>
-                   <i class="fab fa-youtube"></i>
-                    <i id="geluid" class="fas fa-volume-up"></i>
-                       <a href="">
-                    <h1>ANNE-MARIE</h1>
-                    <img src="img/anne-marie.jpg" alt="">
-                        </a>
-                </article>
-        
-        </section>
-
-
-    </main>
     
-    <script src="lowlands.js"></script>
+   <main>
+      
+     <img class="mainfoto" src="img/details.png">
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/f3KwJRtIRWE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+       
+       <section class="tickets">
+            <a href="">
+                <article>
+                    <h1>FESTIVAL TICKET</h1>
+                    <p>TICKETS VOOR 3 DAGEN EN 2 NACHTEN</p>
+                </article>
+            </a>
+            
+            <a href="">
+                <article>
+                    <h1>GROEPS TICKET</h1>
+                    <p>MET Z'N ALLEN NAAR LOWLANDS</p>
+                </article>
+            </a>
+            
+            <a href="">
+                <article>
+                    <h1>CAMPING TICKETS</h1>
+                    <p>MET Z'N ALLEN OP DE CAMPING</p>
+                </article>
+            </a>
+            
+            
+       </section>
 
-    <script src="https://kit.fontawesome.com/4b74e3b787.js" crossorigin="anonymous"></script>
-</body>
-
-</html>
+   </main>
