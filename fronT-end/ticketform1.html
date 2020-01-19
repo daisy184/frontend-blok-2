@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="nl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lowlands</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="https://kit.fontawesome.com/4b74e3b787.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Samengewerkt met Max Mulder -->
+
+        <header>
+
+            <nav class="navresp">
+                <ul class="container">
+                    <li><a href="index.html" class="iglo1"> <i class="fas fa-igloo x"></i> Lowlands</a></li>
+                    <li class="hamburger"> <i class="fas fa-bars  fa-2x"></i>
+                        <ul class="dropdown1">
+                            <li class="logo"><a href=""></a><i class="fas fa-igloo"></i> </li>
+                            <li><a href="index.html">Blokkenschema</a></li>
+                            <li><a href="tickets.html">Tickets</a></li>
+                            <li><a href="index.html">Nieuws</a></li>
+                            <li><a href="index.html">Programma</a></li>
+                            <li><a href="index.html">Plattegrond</a></li>
+                            <li><a href="index.html">FAQ</a></li>
+                            <li><a href="index.html">English</a></li>
+                            <li><a href="index.html">Achtergrond</a></li>
+                            <li><a href="index.html">Green and clean</a></li>
+                            <li><a href="index.html">Over lowlands</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="navpc">
+                <ul class="container">
+                    <li><a href="index.html" class="iglo2"> <i class="fas fa-igloo"></i> </a> </li>
+                    <li><a href="index.html">Blokkenschema</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="index.html">Nieuws</a></li>
+                    <li><a href="index.html">FAQ</a></li>
+                    <li><a href="index.html">Programma</a></li>
+                    <li><a href="index.html">Plattegrond</a></li>
+                    <li><a href="index.html">English</a></li>
+                    <li><a href="index.html">Meer</a>
+                        <ul>
+                            <li><a href="index.html">Achtergrond</a></li>
+                            <li><a href="index.html">Green and clean</a></li>
+                            <li><a href="index.html">Over lowlands</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <img class="mainfoto" src="img/details.png">
+
+            <!-- bron: https://www.w3docs.com/learn-html/html-select-tag.html -->
+
+            <section class="ticketform">
+                <article>
+                    <h1>FESTIVAL TICKET</h1>
+                    <p>Een ticket voor het volledige festival, een plek op de tentencamping én vervoer per pendelbus van en naar NS station Dronten of Lelystad. Let op: er worden geen dagkaarten verkocht. Er kunnen maximaal 4 tickets per persoon worden verkocht. </p>
+                    
+        <!-- Kleine tabel gemaakt met informatie over het geselecteerde ticket -->
+
+                    <table>
+                        <tr>
+                            <th>Ticket:</th>
+                            <td>Lowlands 2020 regular ticket</td>
+                        </tr>
+                        <tr>
+                            <th>Datum:</th>
+                            <td>Vrijdag 21 t/m 23 augustus 2020</td>
+                        </tr>
+                        <tr>
+                            <th>Locatie:</th>
+                            <td>Biddinghuizen</td>
+                        </tr>
+                        <tr>
+                            <th>Leeftijd:</th>
+                            <td>16+</td>
+                        </tr>
+                    </table>
+                    
+        <!-- Formulier met een fieldset met een legend (kop), label (titel), select of input (type)
+        Met select kun door een dropdown het aantal tickets klikken: per option een waarde gegeven
+        Met input (type) type text staat een input vakje waar je text kunt typen
+        Met input (type) date kun je een datum via een kalender selecteren
+        Met input (type) checkbox kun je een vinkje zetten in een vakje
+        Met input (type) submit maak je een button waarmee je de gegevens kunt submitten -->
+
+                    <form>
+                        <fieldset>
+                            <legend>Ticket(s)</legend>
+                            <label>Regular entree ticket: €220 p.st.</label>
+                            <select>
+                                <option value="aantal1">0</option>
+                                <option value="aantal1">1</option>
+                                <option value="aantal2">2</option>
+                                <option value="aantal3">3</option>
+                                <option value="aantal4">4</option>
+                            </select>
+
+                            <legend>Jouw gegevens</legend>
+                            <label>Voornaam</label> <br>
+                            <input type="text" name="voornaam" value="voornaam" maxlength="100"> <br>
+                            <label>Achternaam</label> <br>
+                            <input type="text" name="achternaam" value="achternaam" maxlength="100"> <br>
+                            <label>E-mailadres</label> <br>
+                            <input type="text" name="e-mail" value="e-mail" maxlength="100"> <br>
+                            <label>Geslacht</label> <br>
+                            <label>Man</label><input type="checkbox" name="man" value="man">
+                            <label>Vrouw</label><input type="checkbox" name="vrouw" value="vrouw"><br>
+                            <label>Geboorte datum</label> <br>
+                            <input type="date" name="geboortedatum" value="geboortedatum"> <br>
+                            <label>Telefoonnummer</label> <br>
+                            <input type="text" name="telefoonnummer" value="telefoonnummer" maxlength="100"> <br>
+                            <label>Adres</label> <br>
+                            <input type="text" name="adres" value="adres" maxlength="100"> <br>
+                            <label>Postcode</label> <br>
+                            <input type="text" name="postcode" value="postcode" maxlength="100"> <br>
+                            <label>Stad</label> <br>
+                            <input type="text" name="stad" value="stad" maxlength="100"> <br>
+                            <label>Land</label> <br>
+                            <input type="text" name="land" value="land" maxlength="100"> <br>
+                            <label></label> <br>
+                            <input type="checkbox" name="akkoord" value="akkoord">
+                            <label>Ik ga akkoord met de algemene voorwaarden</label> <br>
+                            <input type="submit" name="bestellen" value="Bestellen" checked="checked">
+
+
+                        </fieldset>
+                    </form>
+
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <h2>VOLG ONS</h2>
+            <i class="fab fa-twitter fa-2x"></i>
+            <i class="fab fa-facebook-square fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+            <i class="fab fa-spotify fa-2x"></i>
+        </footer>
+
+        <script src="lowlands.js"></script>
+
+    </body>
+
+    </html>

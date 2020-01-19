@@ -4,6 +4,10 @@ html {
     margin: 0px;
 }
 
+/* bron: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+/* Navgatie heeft een class container en heeft een flexibele container. 
+Justify content: space-around --> items zijn gelijkmatig verdeeld met gelijke ruimte rond elke regel */
 
 .container {
     display: flex;
@@ -17,16 +21,15 @@ nav {
     position: relative;
 }
 
+/* Iglo1 = het icoon in de responsive navigatie (hamburger menu en verkleinde nav)
+ Iglo2= het icoon in de desktop navigatie (grote nav) */
+
 .iglo1 {
     font-size: 2em;
 }
 
 .iglo2 {
     font-size: 1.2em;
-}
-
-.hamburger {
-    font-size: 2em;
 }
 
 li,
@@ -37,8 +40,6 @@ a {
     text-decoration: none;
     position: relative;
 }
-
-
 
 li a:hover {
     color: limegreen;
@@ -54,9 +55,12 @@ ul li {
     list-style: none;
 }
 
+/* van de ul --> li --> ul (Alle dropdowns):
+Items zijn verborgen met display none
+*/
+
 ul li ul {
-    visibility: hidden;
-    opacity: 0;
+
     position: relative;
     display: none;
     text-align: right;
@@ -64,48 +68,22 @@ ul li ul {
     margin-top: 10px;
 }
 
-ul li:hover > ul,
-ul li ul:hover {
-    visibility: visible;
-    opacity: 1;
+/* Als je over de li van de ul hovert, dan komt de ul tevoorschijn.*/
+
+ul li:hover > ul {
     display: block;
     background-color: #002E77;
     padding: 25px;
 }
 
-ul li ul li {
-    clear: both;
-    width: 100%;
+/*https://css-tricks.com/solved-with-css-dropdown-menus/ */
 
-}
-
-/*https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp*/
-
-input {
-    display: none;
-}
 
 .dropdown1 li a {
     font-size: 1em;
 }
 
-
-.logo {
-    display: none;
-}
-
-
-@media screen and (min-width: 700px) {
-    .iglo,
-    .hamburger {
-        font-size: 2em;
-    }
-
-    ul li ul {
-        margin-left: -120px;
-        margin-top: 10px;
-    }
-}
+/* Als het scherm een min. width heeft van 1025 (of hoger), dan gaat de nav/dropdown van de mobiele versie weg, en komt de nav/dropdown van de desktop/pc versie terug. */
 
 @media screen and (min-width: 1025px) {
 
@@ -129,12 +107,19 @@ input {
     margin-bottom: 20px;
 }
 
+/* Gebruik gemaakt van flex box
+Justify-content: content is gecentreerd
+Flex-wrap: flexitems worden op meerdere lijnen gewikkeld, van boven naar beneden.
+Flex-direction: in rijen*/
+
 .homeartiesten {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
+
+/* Op elk aricle zit een transition als je hovert (achtergrond wordt oranje) */
 
 .homeartiesten article {
     background: #6FCE5F;
@@ -144,25 +129,23 @@ input {
     box-shadow: 5px 10px #000000;
     width: 300px;
     margin: 10px;
-
+    transition: 0.6s;
 }
 
-.homeartiesten >article > a {
+.homeartiesten article:hover {
+    background-color: orange;
+}
+
+.homeartiesten > article > a {
     text-decoration: none;
     color: black;
 }
 
 
-.homeartiesten > article> a > img {
+.homeartiesten > article > a > img {
     width: 100%;
     max-width: 300px;
     height: 200px;
-}
-
-@media screen and (max-width: 400px) {
-    .rij1 {
-        width: 300px;
-    }
 }
 
 .fa-youtube {
@@ -172,42 +155,34 @@ input {
 }
 
 .fa-heart {
-    font-size: 1.5em;
+    font-size: 2em;
     color: white;
     padding-right: 10px;
 }
 
+/*In je JS is class liked aangemaakt. Als het hartje geliked wordt, wordt de animatie likeHeart in 2 sec. 
+uitgevoerd en kleurt het hartje rood.*/
+
 .liked {
-  animation: likeHeart 2s ease;
-  color: red;
+    animation: likeHeart 2s ease;
+    color: red;
 }
+
+/*https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp 
+
+@keyframes geeft animatie code aan. Het kan van de ene CSS stylen overschakelen naar andere 
+CSS stylen. Stijlverandering wordt in % aangegeven: 0% = begin van animatie, 100% = einde.
+DUS: bij 50% van de animatie is het hartje 8x groter.
+Bij het einde van de animatie (100%) is het hartje weer normale size.*/
+
 
 @keyframes likeHeart {
-  50% {
-    transform: scale(15);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+    50% {
+        transform: scale(8);
+    }
 
-/*#hartje:hover {
-    color: red;
-    transition: color 2s ease-out;
-}*/
-
-#geluid {
-    font-size: 1.5em;
-    color: white;
-}
-
-#nieuwsfoto {
-    max-width: 100%;
-}
-
-@media screen and (max-width: 400px) {
-    .rij1 {
-        width: 300px;
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -215,7 +190,7 @@ input {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row;    
+    flex-direction: row;
 }
 
 .tickets > a > article {
@@ -229,9 +204,14 @@ input {
     box-shadow: 5px 10px #000000;
     width: 300px;
     margin: 10px;
+    transition: 0.6s;
 }
 
-/*https://www.youtube.com/watch?v=PaiH9DLzaeU */
+.tickets > a > article:hover {
+    background-color: orange;
+}
+
+/*bron: https://www.youtube.com/watch?v=PaiH9DLzaeU */
 
 .detailspagina {
     display: block;
@@ -241,10 +221,10 @@ input {
     background: #6FCE5F;
     font-family: 'Bebas Neue', cursive;
     font-size: 2em;
-    margin-top: 3em;
+    margin-top: 2em;
     border: 1px solid;
     box-shadow: 5px 10px #000000;
-    
+
 }
 
 p {
@@ -253,14 +233,23 @@ p {
 
 }
 
-.detailspagina > article > img{
+.detailspagina > article > img {
     width: 100%;
     display: block;
     margin: 0 auto;
 }
 
+/* Bron: https://codepen.io/leocampos/pen/pPwwNR */
+
+/* Alle h1 van de detailspagina hebben een gradient*/
+
 .detailspagina h1 {
     text-align: center;
+    font-family: 'Faster One', cursive;
+    font-size: 5.4vw;
+    background: linear-gradient(to right, #00A1C6 0%, #03447A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 iframe {
@@ -270,29 +259,129 @@ iframe {
     padding: 30px;
 }
 
-/* footer {
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+
+footer {
     color: white;
     display: block;
     margin: 0 auto;
     margin-top: 3em;
-    width: 100%;
-    background-color:;
-    padding: 60px 0px;
+    background-color: black;
+    padding: 30px 50px 45px 30px;
+    margin-top: 80px;
 }
 
 footer i {
-    font-size: 2em;
     color: white;
     padding-right: 20px;
 }
 
-footer fieldset {
+/*Bron: https://developer.mozilla.org/nl/docs/Learn/HTML/Forms/Styling_HTML_forms*/
+
+
+.ticketform {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding: 30px;
+    background: #6FCE5F;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+    margin-top: 2em;
+    border: 1px solid;
+    box-shadow: 5px 10px #000000;
+}
+
+/* Alle h1 van de .ticketform hebben een gradient. */
+
+.ticketform h1 {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Faster One', cursive;
+    font-size: 5.4vw;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to right, #00A1C6 0%, #03447A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+fieldset {
+    border-style: none;
+}
+
+table {
     font-family: 'Roboto Condensed', sans-serif;
+    text-align: left;
+    padding-bottom: 20px;
+    color: white;
+}
+
+table th,
+td {
+    padding-right: 18px;
     font-size: 18px;
-    border: none;
-    color: white;  
-} */
+}
 
+select {
+    margin-left: 100px;
+    font-size: 20px;
+}
 
+legend {
+    padding-top: 50px;
+    padding-bottom: 15px;
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+    color: #0042A3;
+}
 
+label {
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+}
 
+input {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: gainsboro;
+}
+
+input[type=text] {
+    width: 36vw;
+}
+
+/* Bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_fade1*/
+
+/* input van de button submit apart gestyled door type. De button heeft een transition als je hovert waarbij de button oranje kleurt, typografie wit wordt en de button 180 graden draait. */
+
+input[type=submit] {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    background-color: #0042A3;
+    color: white;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 0;
+    width: 200px;
+    height: 60px;
+    transition: 0.6s;
+}
+
+input[type=submit]:hover {
+    background-color: orange;
+    color: white;
+    transform: rotate(180deg);
+}
+
+/* Wanneer je over het yt icoontje hovert, draait hij 90 graden, transition in 0,5 sec en kleurt rood. */
+
+.fa-youtube:hover {
+    transform: rotate(90deg);
+    transition: 0.5s;
+    color: red;
+}
